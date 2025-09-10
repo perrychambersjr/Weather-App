@@ -1,10 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import Dashboard from './components/Dashboard'
+import { WeatherDataContextProvider } from './contexts/weatherData'
 import './index.css'
-import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <WeatherDataContextProvider>
+      <Dashboard />
+    </WeatherDataContextProvider>
   </StrictMode>,
 )
