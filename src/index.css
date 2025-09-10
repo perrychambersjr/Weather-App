@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neutral-0: #FFFFFF;
+  --color-neutral-200: #D4D3D9;
+  --color-neutral-300: #ACACB7;
+  --color-neutral-600: #3C3B5E;
+  --color-neutral-700: #302F4A;
+  --color-neutral-800: #262540;
+  --color-neutral-900: #02012C;
+
+  --color-orange-500: #FF820A;
+
+  --color-blue-500: #4658D9;
+  --color-blue-700: #2B1B9C;
+
+
+  /* Typography Presets */
+  /*--name: font-size/line height% letter-spacing*/
+  --text-preset-1: 96px/100% -0.02em "DM Sans";
+  --text-preset-2: 52px/120% 0 "Bricolage Grotesque";
+  --text-preset-3: 32px/100% 0 "DM Sans";
+  --text-preset-4: 28px/120% 0 "DM Sans";
+  --text-preset-5: 20px/120% 0 "DM Sans";
+  --text-preset-5m: 20px/120% 0 "DM Sans";
+  --text-preset-6: 18px/120% 0 "DM Sans";
+  --text-preset-7: 16px/120% 0 "DM Sans";
+  --text-preset-8: 14px/120% 0 "DM Sans";
+
+    /* Spacing Scale */
+  --spacing-0: 0px;
+  --spacing-025: 2px;
+  --spacing-050: 4px;
+  --spacing-075: 6px;
+  --spacing-100: 8px;
+  --spacing-125: 10px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-250: 20px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-800: 64px;
+  --spacing-1000: 80px;
+  --spacing-1200: 96px;
+  --spacing-1400: 112px;
+  --spacing-1600: 128px;
+  --spacing-1800: 140px;
+
+    /* Border Radius Scale */
+  --radius-0: 0px;
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;
+  --radius-24: 24px;
+  --radius-full: 999px;
+}
