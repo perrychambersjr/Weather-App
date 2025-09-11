@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 @import "tailwindcss";
 
 @theme {
+  /* Colors */
   --color-neutral-0: #FFFFFF;
   --color-neutral-200: #D4D3D9;
   --color-neutral-300: #ACACB7;
@@ -14,20 +18,22 @@
   --color-blue-500: #4658D9;
   --color-blue-700: #2B1B9C;
 
+  /* Fonts */
+  --font-bricolage: "Bricolage Grotesque", sans-serif;
+  --font-dm: "DM Sans", sans-serif;
 
-  /* Typography Presets */
-  /*--name: font-size/line height% letter-spacing*/
-  --text-preset-1: 96px/100% -0.02em "DM Sans";
-  --text-preset-2: 52px/120% 0 "Bricolage Grotesque";
-  --text-preset-3: 32px/100% 0 "DM Sans";
-  --text-preset-4: 28px/120% 0 "DM Sans";
-  --text-preset-5: 20px/120% 0 "DM Sans";
-  --text-preset-5m: 20px/120% 0 "DM Sans";
-  --text-preset-6: 18px/120% 0 "DM Sans";
-  --text-preset-7: 16px/120% 0 "DM Sans";
-  --text-preset-8: 14px/120% 0 "DM Sans";
+  /* Typography Sizes (size/line-height/letter-spacing only) */
+  --text-preset-1: 96px/100% -0.02em;
+  --text-preset-2: 52px/120% 0;
+  --text-preset-3: 32px/100% 0;
+  --text-preset-4: 28px/120% 0;
+  --text-preset-5: 20px/120% 0;
+  --text-preset-5m: 20px/120% 0;
+  --text-preset-6: 18px/120% 0;
+  --text-preset-7: 16px/120% 0;
+  --text-preset-8: 14px/120% 0;
 
-    /* Spacing Scale */
+  /* Spacing Scale */
   --spacing-0: 0px;
   --spacing-025: 2px;
   --spacing-050: 4px;
@@ -48,7 +54,7 @@
   --spacing-1600: 128px;
   --spacing-1800: 140px;
 
-    /* Border Radius Scale */
+  /* Border Radius Scale */
   --radius-0: 0px;
   --radius-4: 4px;
   --radius-6: 6px;
