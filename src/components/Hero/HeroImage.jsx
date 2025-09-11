@@ -1,10 +1,11 @@
 import React from 'react'
 import BGTodayLarge from '../../assets/images/bg-today-large.svg'
 import BGTodaySmall from '../../assets/images/bg-today-small.svg'
+import IconSunny from '../../assets/images/icon-sunny.webp'
 
 const HeroImage = ({ location, date, temperature}) => {
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-2/3 h-full">
     {/* Background image */}
     <img
         src={BGTodayLarge}
@@ -13,13 +14,15 @@ const HeroImage = ({ location, date, temperature}) => {
     />
 
     {/* Overlay text */}
-    <div className="absolute inset-0 z-10 flex flex-col justify-between items-center p-6">
-        <div className="flex flex-row justify-center items-center gap-2">
-            <h1 className="text-white text-2xl font-semibold">{location}</h1>
-            <p className="text-white text-sm">{date}</p>
+    <div className="absolute inset-0 z-10 flex flex-row justify-between items-center p-6">
+        <div className="flex flex-col justify-center items-start gap-2">
+            <h1 className="text-white text-3xl font-semibold">{location}</h1>
+            <p className="text-white text-md">{date}</p>
         </div>
-
-        <h1 className="text-white text-4xl font-bold">{temperature}</h1>
+        <div className="flex flex-row justify-end items-center gap-2">
+          <img src={IconSunny} className="w-30 h-30" />
+          <h1 className="text-white text-8xl font-semibold italic">{temperature} °</h1>
+        </div>
     </div>
     </div>
   )
