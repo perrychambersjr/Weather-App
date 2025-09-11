@@ -1,5 +1,7 @@
 import React from 'react';
+import DailyForecast from '../Hero/DailyForecast';
 import HeroImage from '../Hero/HeroImage';
+import HeroStats from '../Hero/HeroStats';
 import HourlyForecast from '../Hero/HourlyForecast';
 
 const Hero = () => {
@@ -8,17 +10,18 @@ const Hero = () => {
   const temperature = "20"
 
   return (
-    <div className="flex flex-row items-start jusity-between p-20 gap-4">
-            <HeroImage 
-                location={location} 
-                date={date} 
-                temperature={temperature}
-            />
+    <div className="max-w-6xl mx-auto px-6 mt-20">
+      <div className="grid grid-cols-3 gap-6">
+        <div className="col-span-2 flex flex-col gap-6">
+          <HeroImage location={location} date={date} temperature={temperature} />
+          <HeroStats />
+          <DailyForecast />
+        </div>
 
-            <HourlyForecast 
-   
-            />
-
+        <div className="col-span-1">
+          <HourlyForecast />
+        </div>
+      </div>
     </div>
   )
 }

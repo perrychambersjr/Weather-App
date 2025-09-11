@@ -7,10 +7,10 @@ const HourlyCard = ({ time, temperature }) => {
         <div className="flex flex-row items-center justify-between p-4">
             <div className="flex flex-row items-center gap-2">
                 <img src={IconPartlyCloudy} className="h-10 w-10" />
-                <h1 className="text-white">3 PM</h1>
+                <h1 className="text-white">{time}</h1>
             </div>
 
-            <p className="text-white">20 °</p>
+            <p className="text-white">{temperature}</p>
         </div>
     </div>
   )
