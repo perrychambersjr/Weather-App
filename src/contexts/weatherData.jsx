@@ -6,6 +6,8 @@ export const WeatherDataContext = createContext(null);
 export const WeatherDataContextProvider = ({ children }) => {
     const [weatherData, setWeatherData] = useState(null);
     const [weatherDataHourly, setWeatherDataHourly] = useState(null);
+    const [locationData, setLocationData] = useState([]);
+    const [selectedLocation, setSelectedLocation] = useState(null);
 
     const url = "https://api.open-meteo.com/v1/forecast";
     const params = {
@@ -51,7 +53,7 @@ export const WeatherDataContextProvider = ({ children }) => {
     }, []);
 
     return (
-        <WeatherDataContext.Provider value={{ weatherData }}>
+        <WeatherDataContext.Provider value={{ weatherData, setWeatherData, locationData, setLocationData, selectedLocation, setSelectedLocation }}>
             {children}
         </WeatherDataContext.Provider>
     );

@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { WeatherDataContext } from '../../contexts/weatherData';
 import DailyForecast from '../Hero/DailyForecast';
 import HeroImage from '../Hero/HeroImage';
 import HeroStats from '../Hero/HeroStats';
 import HourlyForecast from '../Hero/HourlyForecast';
 
 const Hero = () => {
-  const location = "Berlin, Germany";
-  const date = "Tuesday, Aug 5, 2025";
-  const temperature = "20"
+  const { weatherData, locationData, selectedLocation } = useContext(WeatherDataContext);
+
+  if (!weatherData) {
+    return (
+      <section className="text-center p-10">
+        <p className="text-lg text-[var(--color-neutral-200)]">Loading weather...</p>
+      </section>
+    )
+  }
+
+  const temperature = weatherData.hourly.temperature_2m[0];
+  const time = weatherData.hourly.time[0].toLocaleString();
+  const currentLocation = locationData?.[0];
 
   return (
     <div className="max-w-6xl mx-auto px-6 mt-20">
       <div className="grid grid-cols-3 gap-6">
         <div className="col-span-2 flex flex-col gap-6">
-          <HeroImage location={location} date={date} temperature={temperature} />
+          <HeroImage location={selectedLocation} date={time} temp={temperature} />
           <HeroStats />
           <DailyForecast />
         </div>

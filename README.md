@@ -59,6 +59,9 @@ Todo for today:
     - Finish setting up my components, I have the basic layout of the home page made, no responsiveness yet though. 
     - Get working data to all components and display some numbers. 
     - Implement the search to call the API
+- 9/12/2025: Didn't get to everything I wanted to yesterday. Finished up the display and components, now I need to make them functional and work on getting data to every component. Today's plan is as follows:
+  - Get data to all components
+  - Implement search to call API
 
 
 ### Built with

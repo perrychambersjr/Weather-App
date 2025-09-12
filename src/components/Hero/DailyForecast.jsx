@@ -19,8 +19,10 @@ const DailyForecast = () => {
           <div key={x.d} className="bg-[var(--color-neutral-800)] rounded-2xl p-3 min-w-[84px] flex flex-col items-center">
             <span className="text-sm text-white">{x.d}</span>
             <img src={x.icon} className="w-8 h-8 my-2" />
-            <span className="text-sm text-white font-medium">{x.high}</span>
-            <span className="text-xs text-white opacity-70">{x.low}</span>
+            <div className="flex flex-row justify-between gap-4 items-center">
+              <span className="text-sm text-white font-medium">{x.high}</span>
+              <span className="text-xs text-white opacity-70">{x.low}</span>
+            </div>
           </div>
         ))}
       </div>

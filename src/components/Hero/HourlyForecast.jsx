@@ -9,7 +9,7 @@ const HourlyForecast = () => {
     <div className="bg-[var(--color-neutral-800)] rounded-2xl p-4 h-full flex flex-col">
       <div className="flex items-center justify-between mb-3">
         <h2 className="text-white text-xl font-semibold">Hourly Forecast</h2>
-        <button className="bg-[var(--color-neutral-600)] text-white px-3 py-1 rounded-full text-sm whitespace-nowrap">
+        <button className="bg-[var(--color-neutral-600)] text-white px-3 py-1 rounded-full text-sm whitespace-nowrap cursor-pointer">
           Tuesday
         </button>
       </div>
