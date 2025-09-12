@@ -10,8 +10,9 @@ const HeroImage = ({ location, date, temp}) => {
       <img src={BGTodayLarge} alt="bg" className="w-full h-full object-cover" />
       <div className="absolute inset-0 z-10 flex items-center justify-between p-8">
         <div className="flex flex-col gap-2">
-          <h1 className="text-white text-3xl font-semibold">
-            {location ? `${location.name}${location.admin1 ? ", " + location.admin1 : ""}, ${location.country}`: "Your Location"}
+          <h1 className="text-white text-3xl font-semibol whitespace-pre-line">
+            {location ? 
+              `${location.name}${location.admin1 ? ", " + location.admin1 : ""} \n${location.country}`: "Your Location"}
         </h1>
           <p className="text-white text-sm opacity-80">{date}</p>
         </div>

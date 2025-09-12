@@ -16,8 +16,16 @@ const Hero = () => {
     )
   }
 
+  console.log(weatherData.hourly)
   const temperature = weatherData.hourly.temperature_2m[0];
-  const time = weatherData.hourly.time[0].toLocaleString();
+  const time = weatherData.hourly.time[0].toLocaleString("en-US", {
+    weekday: "short",  // Thu
+    month: "short",    // Sep
+    day: "numeric",    // 12
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true       // 12-hour format
+  });
   const currentLocation = locationData?.[0];
 
   return (

@@ -68,8 +68,7 @@ Todo for today:
 
 - [React](https://reactjs.org/) - JS library
 - [TailwindCSS](https://tailwindcss.com/) - CSS Framework
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Open-Meto](https://open-meteo.com/) - Open-Meteo Weather API
 
 ### What I learned
 
