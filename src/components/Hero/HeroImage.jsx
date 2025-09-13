@@ -19,7 +19,7 @@ const HeroImage = ({ location, date, temp}) => {
 
         <div className="flex items-center gap-4">
           <img src={IconSunny} className="w-16 h-16" />
-          <h1 className="text-white text-[78px] font-semibold leading-none">{temp.toFixed(1)}°</h1>
+          <h1 className="text-white text-[78px] font-semibold leading-none">{temp}°</h1>
         </div>
       </div>
     </div>

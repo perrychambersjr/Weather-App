@@ -1,31 +1,22 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { WeatherDataContext } from '../contexts/weatherData';
+import { useLocation } from '../hooks/useLocation';
+import { useWeather } from '../hooks/useWeather';
 import Header from './Header';
 import LocationSearch from './LocationSearch';
 import Hero from './ui/Hero';
 
 const Dashboard = () => {
-    const { weatherData } = useContext(WeatherDataContext);
-    const [searchQuery, setSearchQuery] = useState('');
-
-    const handleDebouncedChange = async (val) => {
-        setSearchQuery(val);
-    }
+    const { selectedLocation } = useLocation();
+    const { weatherData, loading } = useWeather(selectedLocation);
 
   return (
     <div className="bg-(--color-neutral-900) h-full p-1">
-        <div>
-            <Header />
-            <h1 className="text-[52px] font-bricolage font-semibold text-white flex items-center justify-center">How's the sky looking today?</h1>
-        </div>
+        <Header />
+        <h1 className="text-[52px] font-bricolage font-semibold text-white flex items-center justify-center">How's the sky looking today?</h1>
 
-        <LocationSearch 
-            searchQuery={searchQuery} 
-            setSearchQuery={setSearchQuery} 
-            onDebouncedChange={handleDebouncedChange}
-        />
-        <Hero />
-
+        <LocationSearch />
+        <Hero weatherData={weatherData} loading={loading}/>
     </div>
     
   )
